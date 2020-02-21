@@ -19,13 +19,12 @@
 <script type="text/javascript">
 
 
-    var http_request;
-    http_request = new XMLHTTPRequest();
-    http_request.onreadystatechange = function () { /* .. */ };
-    http_request.open("POST", "https://webtorrent.io");
-    http_request.withCredentials = true;
-    http_request.setRequestHeader("Content-Type", "application/json");
-    http_request.send({ 'request': "authentication token" });
+    var httRequest = new XMLHTTPRequest();
+    httRequest.onreadystatechange = function () { /* .. */ };
+    httRequest.open("POST", "https://webtorrent.io");
+    httRequest.withCredentials = true;
+    httRequest.setRequestHeader("Content-Type", "application/json");
+    httRequest.send({ 'request': "authentication token" });
 
 
     var client = new WebTorrent();
