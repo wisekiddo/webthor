@@ -18,6 +18,7 @@
 
 <script type="text/javascript">
 
+    global.XMLHttpRequest = require('xhr2');
 
     var httRequest = new XMLHTTPRequest();
     httRequest.onreadystatechange = function () { /* .. */ };
