@@ -18,12 +18,15 @@
 
 <script type="text/javascript">
 
-    let allowCrossDomain = function(req, res, next) {
-        res.header('Access-Control-Allow-Origin', "*");
-        res.header('Access-Control-Allow-Headers', "*");
-        next();
-    }
-    app.use(allowCrossDomain);
+
+    var http_request;
+    http_request = new XMLHTTPRequest();
+    http_request.onreadystatechange = function () { /* .. */ };
+    http_request.open("POST", "https://webtorrent.io");
+    http_request.withCredentials = true;
+    http_request.setRequestHeader("Content-Type", "application/json");
+    http_request.send({ 'request': "authentication token" });
+
 
     var client = new WebTorrent();
     //var torrentId = 'magnet:?xt=urn:btih:08ada5a7a6183aae1e09d831df6748d566095a10&dn=Sintel&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&ws=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2F&xs=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2Fsintel.torrent';
