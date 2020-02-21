@@ -18,14 +18,14 @@
 
 <script type="text/javascript">
 
-/*    global.XMLHttpRequest = require('xhr2');
+    global.XMLHttpRequest = require('xhr2');
 
     var httRequest = new XMLHTTPRequest();
     httRequest.onreadystatechange = function () { /!* .. *!/ };
     httRequest.open("POST", "https://webtorrent.io");
     httRequest.withCredentials = true;
     httRequest.setRequestHeader("Content-Type", "application/json");
-    httRequest.send({ 'request': "authentication token" });*/
+    httRequest.send({ 'request': "authentication token" });
 
 
     var client = new WebTorrent();
