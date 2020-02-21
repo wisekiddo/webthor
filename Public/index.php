@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <title>WebTorrent & Plyr demo</title>
     <!-- WebTorrent -->
-    <script src="//cdn.jsdelivr.net/webtorrent/latest/webtorrent.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
 
     <!-- Plyr-->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/plyr/3.1.0/plyr.css" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/plyr/3.1.0/plyr.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.10/plyr.css" />
+    <script src="https://cdn.plyr.io/3.5.10/plyr.js"></script>
 </head>
 
 <body>
@@ -18,14 +18,14 @@
 
 <script type="text/javascript">
 
-    global.XMLHttpRequest = require('xhr2');
+/*    global.XMLHttpRequest = require('xhr2');
 
     var httRequest = new XMLHTTPRequest();
-    httRequest.onreadystatechange = function () { /* .. */ };
+    httRequest.onreadystatechange = function () { /!* .. *!/ };
     httRequest.open("POST", "https://webtorrent.io");
     httRequest.withCredentials = true;
     httRequest.setRequestHeader("Content-Type", "application/json");
-    httRequest.send({ 'request': "authentication token" });
+    httRequest.send({ 'request': "authentication token" });*/
 
 
     var client = new WebTorrent();
